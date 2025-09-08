@@ -24,6 +24,7 @@ export default function Portfolio() {
         "Tailwind CSS",
         "Chart.js",
       ],
+      isComplete: true,
       image: "/ane-main-page.png",
       liveUrl: "https://ane-com-br.vercel.app/",
       githubUrl: "#",
@@ -41,13 +42,15 @@ export default function Portfolio() {
         "Tailwind CSS",
         "Chart.js",
       ],
+      isComplete: true,
+
       image: "/royal-dashboard.png",
       liveUrl: "https://barbeariaroyal.vercel.app/",
       githubUrl: "#",
     },
     {
       id: 3,
-      title: "ERP de Doceria",
+      title: "ERP para Doceria",
       company: "Palpitar Confeitaria",
       description:
         "Sistema ERP completo para gestão de doceria, incluindo controle de estoque, vendas, clientes e relatórios financeiros.",
@@ -58,9 +61,30 @@ export default function Portfolio() {
         "Tailwind CSS",
         "Chart.js",
       ],
+      isComplete: false,
+
       image: "/palpitar-dashboard.png",
       liveUrl:
         "https://www.instagram.com/palpitarconfeitaria?igsh=d25mdXRjejk5bXpk",
+      githubUrl: "#",
+    },
+    {
+      id: 4,
+      title: "ERP para Oficina",
+      company: "Demir Diesel",
+      description:
+        "Sistema ERP completo para gestão de oficina, incluindo cadastro de OS, gerenciamento de estoque, clientes, relatórios financeiros, gestão de usuários e permissões.",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Chart.js",
+      ],
+      isComplete: false,
+
+      image: "/demir-dashboard.png",
+      liveUrl: "https://www.instagram.com/demirdiesel/",
       githubUrl: "#",
     },
   ];
@@ -237,11 +261,11 @@ export default function Portfolio() {
                 } gap-8 lg:gap-12 items-center`}
               >
                 <div className="flex-1 w-full">
-                  <div className="relative group ">
+                  <div className="relative group hover:scale-105 transition-transform">
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={`Dashboard do projeto ${project.title}`}
-                      className="w-full rounded-lg shadow-2xl transition-transform group-hover:scale-105"
+                      className="w-full rounded-lg shadow-2xl transition-transform"
                     />
                     <div className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
@@ -284,7 +308,7 @@ export default function Portfolio() {
                     <a target="_blank" href={project.liveUrl}>
                       <Button className="bg-primary hover:bg-primary/90 w-full sm:w-auto hover:cursor-pointer">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Ver Projeto
+                        {project.isComplete ? "Ver Projeto" : "Conhecer"}
                       </Button>
                     </a>
                     {/* <Button
