@@ -129,14 +129,13 @@ export default function Portfolio() {
               Fale Conosco
             </Button>
           </a>
-          <a target="_blank" href="http://wa.me/5583987872668">
-
-          <Button
-            size="sm"
-            className="bg-primary hover:bg-primary/90 sm:hidden hover:cursor-pointer"
-          >
-            Contato
-          </Button>
+          <a target="_blank" href="http://wa.me/5583987872668" className="sm:hidden">
+            <Button
+              size="sm"
+              className="bg-primary hover:bg-primary/90 hover:cursor-pointer"
+            >
+              Contato
+            </Button>
           </a>
         </div>
       </header>
