@@ -129,6 +129,7 @@ export default function Portfolio() {
               Fale Conosco
             </Button>
           </a>
+          <a target="_blank" href="http://wa.me/5583987872668">
 
           <Button
             size="sm"
@@ -136,6 +137,7 @@ export default function Portfolio() {
           >
             Contato
           </Button>
+          </a>
         </div>
       </header>
 
@@ -153,12 +155,14 @@ export default function Portfolio() {
               seu negócio.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 w-full sm:w-auto hover:cursor-pointer"
-              >
-                Ver Nossos Projetos
-              </Button>
+              <a href="#projects">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 w-full sm:w-auto hover:cursor-pointer"
+                >
+                  Ver Nossos Projetos
+                </Button>
+              </a>
               <a target="_blank" href="http://wa.me/5583987872668">
                 <Button
                   size="lg"
